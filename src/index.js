@@ -10,11 +10,23 @@ import ReactDOM from 'react-dom';
 
 // console.log(elements);
 
-const elements = (
-  <h1 className="heading">
-    <span className="text">Hellow React</span>
-    <img src=""/>  
-    </h1>
-);
+// const elements = (
+//   <h1 className="heading">
+//     <span className="text">Hellow React</span>
+//     <img src=""/>  
+//     </h1>
+// );
 
-ReactDOM.render(elements,document.getElementById('root'))
+// ReactDOM.render(elements,document.getElementById('root'))
+
+setInterval(()=>{
+  const elements = (
+    <h1 className="heading">
+      <span className="text">Hellow {new Date().toLocaleTimeString()}</span>
+      <img src=""/>  
+      </h1>
+  );
+  
+  ReactDOM.render(elements,document.getElementById('root'));
+
+},1000)
