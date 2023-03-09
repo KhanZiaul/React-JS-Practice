@@ -19,14 +19,33 @@ import ReactDOM from 'react-dom';
 
 // ReactDOM.render(elements,document.getElementById('root'))
 
-setInterval(()=>{
-  const elements = (
-    <h1 className="heading">
-      <span className="text">Hellow {new Date().toLocaleTimeString()}</span>
+//react element ------------------------------
+
+//setInterval(()=>{
+//   const elements = (
+//     <h1 className="heading">
+//       <span className="text">Hellow {new Date().toLocaleTimeString()}</span>
+//       <img src=""/>  
+//       </h1>
+//   );
+  
+//   ReactDOM.render(elements,document.getElementById('root'));
+
+// },1000)
+
+
+//react component ----------------------------------------
+
+// functional component --------------
+
+
+  function Clock({ locale }){  
+    return (
+      <h1 className="heading">
+      <span className="text">Hellow {new Date().toLocaleTimeString(locale)}</span>
       <img src=""/>  
       </h1>
   );
+}
   
-  ReactDOM.render(elements,document.getElementById('root'));
-
-},1000)
+ReactDOM.render(< Clock locale="bn-BD" />,document.getElementById('root'));
